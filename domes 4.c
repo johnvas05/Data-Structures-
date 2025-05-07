@@ -1,22 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// struct node {
-//     int data;
-//     struct node *next;
-// };
+struct node {
+   int data;
+     struct node *next;
+ };
 
-// struct node* create_node(int value) {
-//     struct node* new_node = (struct node*)malloc(sizeof(struct node));
-//     if (!new_node) {
-//         fprintf(stderr, "Memory allocation failed\n");
-//         exit(EXIT_FAILURE);
-//     }
+ struct node* create_node(int value) {
+     struct node* new_node = (struct node*)malloc(sizeof(struct node));
+     if (!new_node) {
+         fprintf(stderr, "Memory allocation failed\n");
+         exit(EXIT_FAILURE);
+     }
 
-//     new_node->data = value;
-//     new_node->next = NULL;
-//     return new_node;
-// }
+     new_node->data = value;
+     new_node->next = NULL;
+     return new_node;
+ }
 
 // void insert_at_end(struct node** head, int value) {
 //     struct node* new_node = create_node(value);
