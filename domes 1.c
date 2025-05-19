@@ -47,25 +47,6 @@ void mergeTwoLists(struct node* head1, struct node* head2) {
     current->next = head2;
 }
 
-void sortlist(struct node** head1){
-    struct node* current = *head1;
-    struct node* temp = *head1;
-    
-    while (current->next != NULL){
-        temp = current->next;
-        while (temp != NULL){
-
-            if(temp->data < current->data){
-                int t = temp->data;
-                temp->data = current->data;
-                current->data = t;
-            }
-            temp=temp->next;
-        }
-        current = current->next;
-    }
-}
-
 void print_list(struct node* head) {
     while (head != NULL) {
         printf("%d -> ", head->data);
@@ -93,7 +74,6 @@ int main() {
     print_list(list2);
 
     mergeTwoLists(list1, list2);
-    sortlist(&list1);
 
     printf("Merged List: ");
     print_list(list1);
